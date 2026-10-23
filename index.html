@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title> AZ-900 Practice Quiz Builder</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<section id="home">
+<h1>AZ-900 Smart Quiz Builder <small style="font-size:.55em;color:var(--mut)">(unofficial)</small></h1>
+<p class="sub">Pick a topic. Every answer gets instant feedback and an explanation of why it is right or wrong.</p>
+<details class="how card"><summary>How it works</summary><p>1) Choose a topic. 2) Mark how confident you are, then answer. 3) Get instant feedback with an explanation. 4) Still unclear? Ask Claude to re-explain with an analogy, a beginner version or a memory trick. 5) Results flag lucky guesses and overconfident misses so you know what to revise first.</p></details>
+<div class="chips"><button class="chip" id="timedToggle">⏱ Timed mode: off</button></div>
+<div class="grid" id="topics"></div>
+</section>
+<section id="quiz" hidden>
+<div class="meta"><span id="tn"></span><span class="timer" id="tm"></span><span id="pc"></span></div>
+<div class="bar"><i id="pb"></i></div>
+<div class="card">
+<div class="q" id="qt"></div>
+<div class="chips" id="confrow"><span>Confidence:</span><button class="chip on" data-c="sure">Pretty sure</button><button class="chip" data-c="guess">Guessing</button></div>
+<div id="opts"></div>
+<div id="fb" class="fb" hidden></div>
+<div class="ai" id="ai" hidden><div class="row"><button class="btn alt" data-m="analogy">Explain with an analogy</button><button class="btn alt" data-m="beginner">Explain for a beginner</button><button class="btn alt" data-m="trick">Memory trick</button></div><div class="aibox" id="aibox" hidden></div></div>
+<div class="row"><button class="btn" id="next" hidden></button><button class="btn alt" id="quit">Quit</button></div>
+</div>
+</section>
+<section id="done" hidden>
+<div class="card">
+<h2>Results</h2>
+<div class="big" id="score"></div>
+<p id="verdict" class="sub"></p>
+<div id="insight" class="sub"></div><div id="bytopic"></div>
+<div class="row"><button class="btn" id="retryMiss">Retry missed</button><button class="btn alt" id="again">Back to topics</button></div>
+</div>
+<div class="card" id="review" style="margin-top:12px" hidden><h2>Review your misses</h2><div id="revlist"></div></div>
+</section>
+<footer> All questions and explanations are original practice material, not real exam questions. Azure and AZ-900 are trademarks of their respective owner.</footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>

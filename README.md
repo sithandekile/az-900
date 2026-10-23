@@ -20,3 +20,5 @@ The number is the index of the correct option.
 The "Explain with an analogy / beginner / memory trick" buttons use Claude's
 in-page capability, which only exists when the page is hosted as a Claude
 artifact. When opened locally the buttons stay hidden and everything else works.
+
+#live link: https://sithandekile.github.io/az-900/
